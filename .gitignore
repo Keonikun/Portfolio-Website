@@ -1,3 +1,4 @@
 #ignore node-modules folder
 node-modules
 dist
+node_modules

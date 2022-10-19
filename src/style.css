@@ -2,6 +2,7 @@
 {
     margin: 0;
     padding: 0;
+    font-family: 'Quattrocento', serif;
 }
 
 html,
@@ -16,4 +17,308 @@ body
     top: 0;
     left: 0;
     outline: none;
+    z-index: -1;
+}
+
+.header
+{
+    width: 100%;
+    height: 5%;
+    background-color: black;
+    position: absolute;
+}
+
+.title
+{
+    color: white;
+    top: 50%;
+    transform: translate(0%,-50%);
+    position: absolute;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.projectsWrapper
+{
+    position: absolute;
+    top: 46%;
+    width: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Quicksand', serif;
+    list-style: none;
+    font-size: 40px;
+    opacity: 0;
+}
+
+.projectsWrapper ul 
+{
+    list-style: none;
+
+}
+
+.projectsWrapper ul li a
+{
+    text-decoration: none;
+    color: black;
+    list-style: none;
+    font-size: 24px;
+    transition: 0.2s;
+}
+
+.projectsWrapper ul li a:hover
+{
+    color: grey;
+}
+
+.aboutWrapper
+{
+    position: absolute;
+    width: 40%;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 18px;
+    opacity: 0;
+}
+
+.aboutTitle
+{
+    padding-bottom: 10px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.aboutWrapper ul
+{
+    list-style: none;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.aboutWrapper ul li a
+{
+    text-decoration: none;
+    color: black;
+    transition: 0.2s;
+}
+
+.aboutWrapper ul li a:hover
+{
+    color: red;
+}
+
+.aboutWrapper hr
+{
+    background-color: black;
+    color: black;
+    height: 1px;
+    width: 100%;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.webDevWrapper
+{
+    position: absolute;
+    width: 50%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 600px;
+    min-width: 400px;
+}
+
+.webDevTitle
+{
+    text-align: center;
+}
+
+.webDevWrapper hr
+{
+    color: black;
+    background-color: black;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 1px;
+    width: 100%;
+}
+
+.webDevAdaptiveContent
+{
+    position: relative;
+}
+
+.webDevAdaptiveContent ul
+{
+    transition: 1s;
+}
+
+.webDevAdaptiveContent ul li
+{
+    list-style: none;
+    text-align: center;
+    padding-bottom: 15px;
+    width: 100%;
+    transition: 1s;
+}
+
+.webDevAdaptiveContent ul:hover > li
+{
+    width: 0;
+}
+
+.webDevAdaptiveContent ul li a
+{
+    text-decoration: none;
+    color: black;
+    transition: 0.2s;
+    font-size: 20px;
+    font-weight: 10px;
+}
+
+.webDevAdaptiveContent ul li a:hover
+{
+    color: red;
+}
+
+.webDevContent
+{
+    position: absolute;
+    top: 0;
+    width: 60%;
+    right: 0;
+}
+
+.webDevLine
+{
+    position: absolute;
+    background-color: black;
+    width: 1px;
+    height: 0%;
+    top: 0;
+    left: 35%;
+    transition: 1s;
+}
+
+.webDevAdaptiveContent ul:hover .webDevLine
+{
+    height: 100%;
+}
+
+.sublinks
+{
+    position: absolute;
+    width: 80%;
+    bottom: 10%;
+    left: 50%;    
+    transform: translate(-50%,-50%);
+    max-width: 1000px;
+}
+
+.sublinks hr
+{
+    border: none;
+    background-color: black;
+    color: black;
+    height: 1px;
+    width: 100%;
+    
+}
+
+.sublinks ul
+{
+    list-style: none;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.sublinks ul li
+{
+    display: block;
+}
+
+.sublinks ul li a
+{
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    transition: 0.2s;
+    font-family: 'Quattrocento', serif;
+}
+
+.sublinks li a:hover
+{
+    color: red;
+}
+
+.footer
+{
+    width: 100%;
+    height: 5%;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+}
+
+.loadingTitle
+{
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    color: white;
+    opacity: 1;
+    transition: 1s;
+    z-index: 2;
+}
+
+.loadingTitle.ended
+{
+    opacity: 0;
+}
+
+.loadingBackground
+{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    background-color: black;
+    position: absolute;
+    transition: 1.5s ease-in-out;
+    opacity: 1;
+    transform-origin: center center;
+}
+
+.loadingBackground.ended
+{
+    top: 50%;
+    height: 0;
+}
+
+.loading-bar
+{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+    transform: scaleX(0);
+    transform-origin: top center;
+    transition: transform 0.5s;
+    will-change: transform;
+    z-index: 2;
+}
+
+.loading-bar.ended
+{
+    transform-origin: top center;
+    transition: transform 1.5s ease-in-out;
 }

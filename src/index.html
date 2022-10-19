@@ -3,10 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>J-Engine</title>
+    <title>Julien Darling-Funk</title>
+    <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
+    <script src="https://kit.fontawesome.com/87f712bafc.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- THREE JS CANVAS -->
+    <div class="loading-bar"></div>
+    <div class="loadingBackground"></div>
+    <div class="loadingTitle">Julien Darling-Funk</div>
+    <div class="header">
+        <div class="title">Julien Darling-Funk</div>
+    </div>
+    <div class="footer"></div>
+    
+    <div class="sublinks">
+        <hr/>
+        <ul>    
+            <li>/</li>
+            <li><a id ="projects" class="projects" href="#">Projects </a></li>
+            <li>/</li>
+            <li><a id ="about" class="about" href="#">About </a></li>
+            <li>/</li>
+            <li><a id ="archive" class="archive" href="#">Web Design </a></li>
+            <li>/</li>
+            <li><a id ="entrance" class="entrance" href="#">Enter </a></li>
+            <li>/</li>
+        </ul>
+        <hr/>
+    </div>
+
+    <div id="projectsWrapper" class="projectsWrapper">
+        <h2 id= "projectsTitle" class="projectsTitle">Projects</h2>
+        <ul>
+            <li><a id="firstProject" href="#">Camera Obscura (2022)</a></li>
+            <li><a id="secondProject" href="#">Points of Intersection (2019)</a></li>
+            <li><a id="thirdProject" href="#">Sun/Snow:Entropy, Reform (2018)</a></li>
+        </ul>
+    </div>
+    
+    
+
+    <div id="aboutWrapper" class="aboutWrapper">
+        <h2 class="aboutTitle">About</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a consequat lacus. Mauris id feugiat dui. 
+            Vivamus ullamcorper nec massa eu dictum. Curabitur congue magna at dolor pharetra molestie. Sed eu molestie purus, 
+            vitae efficitur turpis. Vestibulum malesuada cursus eros at molestie. 
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a consequat lacus. Mauris id feugiat dui. 
+            Vivamus ullamcorper nec massa eu dictum. Curabitur congue magna at dolor pharetra molestie. Sed eu molestie purus, 
+            vitae efficitur turpis. Vestibulum malesuada cursus eros at molestie. 
+        </p>
+        <hr>
+        <ul>
+            <li>/</li>
+            <li><a href="#">Contact</a></li>
+            <li>/</li>
+            <li><a href="#">CV</a></li>
+            <li>/</li>
+            <li><a href="https://www.instagram.com/julienkdf/" target="_blank">Instagram</a></li>
+            <li>/</li>
+        </ul>
+        <hr>
+    </div>
+
+    <div id="webDevWrapper" class="webDevWrapper">
+        <h2 class="webDevTitle">Web Design</h2>
+        <hr>
+        <div class="webDevAdaptiveContent">
+            <ul>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Past&nbsp;Websites</a></li>
+                <li><a href="#">Philosophy</a></li>
+                <li><a href="#">Commision</a></li>
+            </ul>
+            <div class="webDevLine"></div>
+            <p class="webDevContent">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a consequat lacus. Mauris id feugiat dui. 
+                Vivamus ullamcorper nec massa eu dictum. Curabitur congue magna at dolor pharetra molestie. Sed eu molestie purus, 
+                vitae efficitur turpis. Vestibulum malesuada cursus eros at molestie. 
+            </p>
+        </div>  
+    </div>
+
+    <script type="text/javascript">
+        const loadingTitleBaffle = baffle(".loadingTitle")
+        loadingTitleBaffle.set({
+            characters : 'Ð¿¾»×Æ⇑¶¥ψβ⊆∏℘ΧΘ⇔¼£§©®Σλχ←',
+            speed: 200
+        })
+        loadingTitleBaffle.start()
+        loadingTitleBaffle.reveal(1000, 500);  
+        const projectsBaffle = baffle(".projects")
+        projectsBaffle.set({
+            characters : 'Ð¿¾»×Æ⇑¶¥ψβ⊆∏℘ΧΘ⇔¼£§©®Σλχ←',
+            speed: 120
+        })
+        archiveBaffle.start()
+        archiveBaffle.reveal(1000, 500);  
+    </script>
+    
+    <!-- THREEJS Canvas -->
     <canvas class="webgl"></canvas>
 </body>
 </html>
